@@ -163,7 +163,7 @@ if __name__ == '__main__':
     # --- decompress ---
     with open('new-data.beka', 'rb') as f_in:
         head_length = int(f_in.read(8))
-        head = f_in.read(head_length + 24).decode(encoding='utf-8')
+        head = f_in.read(head_length + 24).decode(encoding='utf-8')  #TODO fix this. sometimes it works without +24
         compressed_data = f_in.read()
     f_in.close()
 
